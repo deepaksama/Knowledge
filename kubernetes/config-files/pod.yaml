@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: kube-demo
+  labels:
+    app: kube-demo
+spec:
+  containers:
+  - name: kube-demo-ctnr 
+    image: deepaksama26/kube-demo:0.0.4-SNAPSHOT
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: logging-config-map
+      mountPath: /config/logging-config
+
+  volumes:
+    - name: logging-config-map
+      configMap:
+        name: logging-config

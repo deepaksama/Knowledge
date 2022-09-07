@@ -24,3 +24,18 @@ There are two way to provide instructions to kubernetes
 
 
 
+Labels and Selectors and Namespaces
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+
+
+
+Scaling
+Self Healing
+Rolling Updates
+Rollbacks
+
+HPA - Horizontal Pod autoscaler
+CA - Cluster Autoscaler
+

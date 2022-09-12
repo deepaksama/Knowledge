@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-echo
+spec: 
+  template:
+    spec:
+      containers:
+        - name: job-container
+          image: 
+          command: ["/bin/sh", "echo", "Hello World"]
+      restartPolicy: Never
+  backofLimit: 4

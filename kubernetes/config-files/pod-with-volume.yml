@@ -10,4 +10,11 @@ spec:
     image: deepaksama26/kube-demo:0.0.4-SNAPSHOT
     ports:
     - containerPort: 80
-    
+    volumeMounts:
+    - name: logging-config-map
+      mountPath: /config/logging-config
+
+  volumes:
+    - name: logging-config-map
+      configMap:
+        name: logging-config

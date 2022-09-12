@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  - name: kube-demo-replicaset
+    labels:
+      app: kube-demo
+      tier: backend
+spec:
+  replicas: 3
+  template:
+    metadata:
+      - name: kube-demo-pod 
+        labels:
+          app: kube-demo
+          tier: backend
+    spec:
+      containers:
+        - name: kube-demo-ctnr
+          image: deepaksama26/kube-demo:0.0.4-SNAPSHOT
+          ports:
+            containerPort: 8080
+          

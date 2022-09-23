@@ -1,3 +1,73 @@
 @startmindmap Agenda
-+ Introduction
+
+<style>
+mindmapDiagram {
+    node {
+        BackgroundColor #ffaa00
+    }
+    :depth(1) {
+      BackGroundColor lightblue
+    }
+    :depth(2) {
+      BackGroundColor lightgreen
+    }
+  
+    .green {
+        BackgroundColor lightgreen
+    }
+    .blue {
+        BackgroundColor LightBlue
+    }
+    .orange {
+        BackgroundColor #ffaa00
+    }
+    arrow {
+        LineColor blue
+    }
+}
+</style>
+
++ Kubernetes
+++ Introduction 
++++ Container Acrchestrators
++++ Terminology
+++++_ Clusters
+++++_ Control Plane  
+++++_ Nodes
+
+++ Architecture 
++++ Control Plane 
+++++_ API Server
+++++_ Contoller Managers
+++++_ Schedular
+++++_ etcd 
+
++++ Worker Nodes 
+++++_ Kubelet
+++++_ Kube proxy
+++++_ Runtime & CRI Shim
+
+++ HandsOn 
++++ Available Options
+++++_ Docker desktop
+++++_ Mini Kube 
+++++_ Kubernetes playground
+++++_ A cloud guru 
+
++++ Installations
+++++_ awscli
+++++_ kubectl
+++++_ eksctl 
+
+++ Deep dive 
++++ Technical terms
+++++_ Pods 
+++++_ ReplicaSet 
+++++_ Services 
+++++_ Deployment 
+++++_ Desired state and Actual State 
+++++_ Imperative style / Declarative style 
+
+
+
 @endmindmap

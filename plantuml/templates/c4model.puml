@@ -1,0 +1,29 @@
+@startuml arc
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+
+!includeurl KubernetesPuml/kubernetes_Common.puml
+!includeurl KubernetesPuml/kubernetes_Context.puml
+!includeurl KubernetesPuml/kubernetes_Simplified.puml
+
+!includeurl KubernetesPuml/OSS/KubernetesSvc.puml
+!includeurl KubernetesPuml/OSS/KubernetesIng.puml
+!includeurl KubernetesPuml/OSS/KubernetesPod.puml
+!includeurl KubernetesPuml/OSS/KubernetesRs.puml
+!includeurl KubernetesPuml/OSS/KubernetesDeploy.puml
+!includeurl KubernetesPuml/OSS/KubernetesHpa.puml
+
+
+LAYOUT_WITH_LEGEND()
+
+left to right direction
+
+Cluster_Boundary(master, "Control Plane") {
+
+}
+Cluster_Boundary(cluster, "Worker Node") {
+
+}
+
+'System(master, "Control Plane", $sprite="img:System(system, "System with an image", $sprite="img:System(system, "System with an image", $sprite="img:http://plantuml.com/logo3.png")")")
+@enduml

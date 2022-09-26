@@ -1,5 +1,33 @@
 
+<style>
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+</style>
+
 ## Introduction
+### <o>Introduction
+
+![architecture](design/architecture.drawio)
+``` plantuml
+@startmindmap
+<style>
+mindmapDiagram {
+  .green {
+    BackgroundColor lightgreen
+  }
+  .blue {
+    BackgroundColor LightBlue
+  }
+  .orange {
+    BackgroundColor Orange
+  }
+}
+</style>
++ eksctl <<orange>>
+@endmindmap
+```
+
 
 Docker containers are awsome .. however as teams create more and more containers to run applications.. its more and more challenging to manage things like
 * Controlling storage for them

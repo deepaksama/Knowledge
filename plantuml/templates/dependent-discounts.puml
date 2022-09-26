@@ -1,0 +1,143 @@
+@startuml Dependent Discounts
+skinparam dpi 150
+(*) --> "
+{{
+    salt
+    {+
+    Admin
+    ---
+    > Cancel Reasons
+    > Catalog compare
+    > Discount Coupons 
+    > Dependent Discounts
+    > Order Tools
+    "                         "
+    }
+
+}}
+" as landingPage
+landingPage -down-> "
+{{
+salt
+{+
+Dependent Discounts
+--
+[Search Discount]  | [+ Add Discount]
+> Labour Day
+> BAU 
+> Mother's Day 
+"                   "
+}
+}}
+" as dDiscounts
+dDiscounts -down-> "
+{{
+salt
+{+
+Add Discount Name
+--
+[Search Discount]  | [+ Add Discount]
+v Labour Day
+    {+
+    .
+    Discount Name : | {+ "XYZ                "}  
+     | [Ok] | [Cancel] 
+    .
+    }
+> BAU 
+> Mother's Day 
+"                   "
+}
+}}
+" as addDiscountName
+
+addDiscountName -down-> "
+{{
+salt
+{+
+View Discount
+--
+v Mother's Day
+    {+
+        O-1234 ( One month) | [Edit] | [Publish]
+        * P-12345 (DNA) | [ Edit ]
+        * P-12346 (DNA + Traits) | [Edit]
+        * P-12347 | [Edit]
+    }
+   [ + Add Dependent Discount ] 
+}
+}}
+" as viewDiscount
+viewDiscount -down-> "
+{{
+    salt
+    {
+        Add Discount
+        --
+        Discount Name: {+ Mother's Day}
+        Discounted Item
+        {+
+           OfferId: | ^  O-12345 ^
+           Currency: | ^ USD ^
+           Quantity: {+ " 2 "}
+           Discount Amount: {+ "10"} |  [X] Enabled
+        }
+        Full price item
+        {+
+            Catalog item id: | ^ xyz ^
+            Quantity: {+ "2   "} |  [X] Enabled
+        }
+        [ + Add full price item]
+        [ Save]
+    }
+}}
+" as addDiscount 
+addDiscount -down-> "
+{{
+    salt
+    {
+        Edit discounted item
+        --
+        Discounted Item 
+        {+
+           OfferId: | ^  O-12345 ^
+           Currency: | ^ USD ^
+           Quantity: {+ " 2 "}
+           Discount Amount: {+ "10"} |  [X] Enabled
+        }
+        Full price item
+        {+
+            Catalog item id: | ^ P-12345 ^
+            Quantity: {+ "2   "} |  [X] Enabled
+        }
+        [ + Add full price item]
+        [ Update]
+    }
+}}
+" as editDiscountedItem
+editDiscountedItem -down-> "
+{{
+    salt
+    {
+        Edit full priced item
+        --
+        Discounted Item 
+        {+
+           OfferId: |   O-12345 
+           Currency: | USD
+           Quantity:  2
+           Discount Amount: 10 |  [X] Enabled
+        }
+        Full price item
+        {+
+            Catalog item id: | ^ P-12345 ^
+            Quantity: {+ "2   "} |  [X] Enabled
+        }
+        [ + Add full price item]
+        [ Update]
+    }
+}}
+" as editFullPricedItem
+
+@enduml
+

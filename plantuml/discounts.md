@@ -12,7 +12,7 @@ Admin
 > Discount Coupons 
 > Dependent Discounts
 > Order Tools
-"                         "
+"                                                         "
 }
 @endsalt
 ```
@@ -25,11 +25,11 @@ skinparam dpi 130
 {+
 Dependent Discounts
 --
-[Search Discount]  | [+ Add Discount]
+ [Search Discount]  | [+ Add Discount]
 > Labour Day
 > BAU 
 > Mother's Day 
-"                   "
+"                                          "
 }
 @endsalt
 ```
@@ -51,7 +51,7 @@ Discount Name : | {+ "XYZ                "}
 }
 > BAU 
 > Mother's Day 
-"                   "
+"                                     "
 }
 @endsalt
 ```
@@ -73,6 +73,7 @@ v Mother's Day
     * P-12347 | [Edit]
 }
 [ + Add Dependent Discount ] 
+"                                                          "
 }
 @endsalt
 ```
@@ -100,6 +101,7 @@ skinparam dpi 130
     }
     [ + Add full price item]
     [ Save]
+    "                                                "
 }
 @endsalt
 ```
@@ -126,6 +128,7 @@ skinparam dpi 130
     }
     [ + Add full price item]
     [ Update]
+    "                                                          "
 }
 @endsalt
 ```
@@ -153,6 +156,7 @@ skinparam dpi 130
     }
     [ + Add full price item]
     [ Update]
+    "                                                          "
 }
 
 @endsalt

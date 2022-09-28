@@ -12,18 +12,33 @@
 !includeurl KubernetesPuml/OSS/KubernetesRs.puml
 !includeurl KubernetesPuml/OSS/KubernetesDeploy.puml
 !includeurl KubernetesPuml/OSS/KubernetesHpa.puml
-
+!includeurl KubernetesPuml/OSS/KubernetesApi.puml
+!includeurl KubernetesPuml/OSS/KubernetesSched.puml
+!includeurl KubernetesPuml/OSS/KubernetesCm.puml
+!includeurl KubernetesPuml/OSS/KubernetesKubelet.puml
+!includeurl KubernetesPuml/OSS/KubernetesKproxy.puml
 
 LAYOUT_WITH_LEGEND()
 
 left to right direction
 
-Cluster_Boundary(master, "Control Plane") {
-
+Cluster_Boundary(controlPlane, "Conttrol Plane") {
+    KubernetesApi(kubernetesApi, "API Server", "")
+    KubernetesSched(kubernetesSched, "", "")
+    KubernetesCm(kubernetesCm, "", "")
 }
-Cluster_Boundary(cluster, "Worker Node") {
 
+Cluster_Boundary(workerNode, "Worker Node") {
+   KubernetesKubelet(kubelet, "", "")
+   KubernetesKproxy(kProxy, "", "")
+   KubernetesPod(runtime, "", "")
 }
 
+' Namespace_Boundary(cPlane, "Control Plane") {
+        
+    '}
+    'Namespace_Boundary(wNode, "Worker Node") {
+       
+    '}
 'System(master, "Control Plane", $sprite="img:System(system, "System with an image", $sprite="img:System(system, "System with an image", $sprite="img:http://plantuml.com/logo3.png")")")
 @enduml

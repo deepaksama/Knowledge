@@ -6,28 +6,8 @@ g { color: Green }
 </style>
 
 ## Introduction
-### <o>Introduction
 
-![architecture](design/architecture.drawio)
-``` plantuml
-@startmindmap
-<style>
-mindmapDiagram {
-  .green {
-    BackgroundColor lightgreen
-  }
-  .blue {
-    BackgroundColor LightBlue
-  }
-  .orange {
-    BackgroundColor Orange
-  }
-}
-</style>
-+ eksctl <<orange>>
-@endmindmap
-```
-
+![architecture](design/architecture.drawio.svg)
 
 Docker containers are awsome .. however as teams create more and more containers to run applications.. its more and more challenging to manage things like
 * Controlling storage for them
@@ -80,18 +60,20 @@ Like container as atomic units of deployment.. In kubernetes an atomic unit of d
 What that means is we cannot deploy containers directly on kubernetes. In order for a container to run on kubernestes it should be wrapped in a Pod.
 
 Kubernetes like us describe things declaratively.  
-**Ex**:  
-```
-- 10 copies of some service
-- Xyz Image
-- Port 8080
-- "env=prod" label
-```
-Technical term for this is **Desired State**.  We write this in a config file and we give it to kubernetes and say Hey kubernetes make this happen please.
-If you see this sudo we are specifying any commands to pull images, to start containers, add them to network, expose port number, add some tags/labels.  Compate it this with humongus script with all those commands and logic. The technical term for this way of describing is called **Declarative** way.
-
-> **Sample config file** : _deployment.yml_
+>
 > ```
+> - 10 copies of XYZ service
+> - PQR Image
+> - Port 8080
+> - "env=prod" label
+> ```
+> 
+Technical term for this is _**Desired State**_.  We write this in a config file and we give it to kubernetes and say Hey kubernetes make this happen please.
+If you see this sudo we are not specifying any commands to pull images, to start containers, add them to network, expose port number, add some tags/labels.  Compare this with humongus script with all those commands and logic. The technical term for this way of describing is called _**Declarative**_ way.
+
+**Sample config file** 
+> **File:** _deployment.yml_
+> ``` yml
 > apiVersion: apps/v1
 > kind: Deployment
 > metadata:
@@ -112,6 +94,7 @@ If you see this sudo we are specifying any commands to pull images, to start con
 >         ports:
 >           - containerPort: 80
 > ```
+>
 
 ## Demo
 

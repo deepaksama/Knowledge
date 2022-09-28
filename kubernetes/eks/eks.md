@@ -7,7 +7,7 @@
     > * Does Autoscaling
     > * Does Backups 
 
- * Cluster Creation Process
+* Cluster Creation Process
     1. **Method 1: Manual Setup**
         * Account Setup 
           * Create Account 
@@ -34,29 +34,33 @@
             > eksctl is a command line utiliy create by **Weaveworks** and supported by large community
         * Installation
           * Windows
-            > ``` choco install eksctl ```
+            > ``` shell
+            > choco install eksctl 
+            > ```
           * MacOS
-              >  ```
+              >  ``` shell
               > brew tap weaveworks/tap
               > brew install weaveworks/tap/eksctl
               > ```
         * Command:
           * Syntax: 
-            > ``` eksctl create  cluster <OPTIONS>```
-            * OPTIONS
-                > ```
-                > OPTIONS : 
-                >    --name <RESOURCE_NAME>
-                >    --region <REGION>
-                >    --nodegroup-name <GROUP_NAME>
-                >    --node-type <NODE_TYPE>
-                >    --nodes <NUMBER_OF_NODES>
-                >    --min-nodes <NUMBER_OF_NODES>
-                >    --max-nodes <NUMBER_OF_NODES>
-                > FLAGS:   
-                >    --managed
-                >    --asg-access 
-                > ```
+            > ``` shell 
+            > eksctl create  cluster <OPTIONS>
+            > ```
+          * OPTIONS
+              > ```
+              > OPTIONS : 
+              >    --name <RESOURCE_NAME>
+              >    --region <REGION>
+              >    --nodegroup-name <GROUP_NAME>
+              >    --node-type <NODE_TYPE>
+              >    --nodes <NUMBER_OF_NODES>
+              >    --min-nodes <NUMBER_OF_NODES>
+              >    --max-nodes <NUMBER_OF_NODES>
+              > FLAGS:   
+              >    --managed
+              >    --asg-access 
+              > ```
           * Example:
               > ```  eksctl create  cluster \
               > --name kube-demo-cluster \

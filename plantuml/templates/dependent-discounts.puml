@@ -1,5 +1,6 @@
 @startuml Dependent Discounts
-skinparam dpi 150
+skinparam dpi 
+
 (*) --> "
 {{
     salt

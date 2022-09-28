@@ -181,7 +181,21 @@ mindmapDiagram {
         > --managed --asg-access
         > ```
 ##### <secondary> _kubectl_ configuration
-
+  * Step 1: Setup Kube config
+    * Step a: Check if the .kube folder in the home directory exists and create one if does not exist.
+    * Step b: Copy the file [config](https://confluence.ancestry.int/download/attachments/207359792/config?version=1&modificationDate=1662432987000&api=v2) to the .kube folder
+    * Step c: Update namespace with OMS stack id in the config file
+    * Step d: Verify Configuration
+      > ``` 
+      > kubectl config get-contexts
+      > ```
+  * Step 2:  Add user credentials and token to the configuration
+    * Step a: Go to the HAL app and run the below command  
+      > ``` eks_user_credentials --cluster eks-soxapps --account ancestry-l3-sox ```
+    * Step b: Copy the output of the above command to the placeholder at the bottom of the config file.  
+      > Note: copy only the name and user part of the output
+    * Step c: Repeat the above command for L2 and L1 also
+  * Step 3: Set current context
 ### <secondary> Deep dive
 
 **Declarative**:

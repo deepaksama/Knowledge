@@ -15,7 +15,7 @@
 <style>
 mindmapDiagram {
     /'
-        1. #FFD3B5, #FFAAA6, #FF8C94
+        1. #FFD3B5, #FFAAA6, #F  F8C94
         2. #727077, #EED8C9 #E99787, #A49592
         3. #07575B, 66A5AD, #C4DFE6, #003B46
     '/
@@ -77,30 +77,38 @@ mindmapDiagram {
 
 ++ Hosted Kubernetes
 
-++ Hands-On 
+++ Pricatical Kubernetes 
 +++ Available Options
 ++++_ Docker desktop
 ++++_ Mini Kube 
 ++++_ Kubernetes playground
 ++++_ A cloud guru 
 
-+++ Installations
++++ Setup tools
 ++++_ awscli
 ++++_ kubectl
 ++++_ eksctl 
 
-+++ Configuration
++++ Configure tools
 ++++_ create cluster
 ++++_ kubectl configuration
 
-++ Deep dive 
-+++ Technical terms
++++ Kubernetes Components
 ++++_ Pods 
 ++++_ ReplicaSet 
 ++++_ Services 
 ++++_ Deployment 
-++++_ Desired state and Actual State 
-++++_ Imperative style / Declarative style 
+
++++ Hands-On
+++++_ kubectl commands
+
++++ Technical terms
+++++_ Desired state 
+++++_ Actual State 
+++++_ Imperative style
+++++_ Declarative style 
+
++++ Deep dive
 
 @endmindmap
 ```
@@ -113,7 +121,7 @@ mindmapDiagram {
 
 <img src="./../design/hosted-kubernetes.drawio.svg" width="900px">
 
-### <secondary> 1. Hands-On
+### <secondary> Hands-On
 
 #### <secondary> a. Installations
 ##### awscli

@@ -47,41 +47,7 @@
     >```
 * View
   ![PlantUml View](http://plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/deepaksama/Knowledge/main/plantuml/templates/plantuml-example.puml)
-    ``` plantuml
-
-    @startsalt
-    skinparam dpi 130
-    {
-    * Just plain text
-    [This is my button]
-    ()  Unchecked radio
-    (X) Checked radio
-    []  Unchecked box
-    [X] Checked box
-    "Enter text here   "
-    .
-    ^This is a droplist^
-    .
-    {+  
-        This is test area
-        . 
-        "                   "
-    }
-    .
-    {SI  
-        This is test area with vertical scrollbar
-        .     
-        "                          "
-    }
-    .
-    {S-  
-        This is test area with horizontal scrollbar
-        .     
-        "                          "
-    }
-    }
-    @endsalt
-    ```
+   
 ## References
 * [PlantUml Documentation](https://plantuml.com)
 * [Kubernets Ref](https://github.com/dcasati/kubernetes-PlantUML)

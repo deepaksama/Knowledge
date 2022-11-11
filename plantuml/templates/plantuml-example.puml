@@ -1,0 +1,31 @@
+@startsalt
+{
+ * Just plain text
+ [This is my button]
+ ()  Unchecked radio
+ (X) Checked radio
+ []  Unchecked box
+ [X] Checked box
+ "Enter text here   "
+.
+^This is a droplist^
+.
+ {+  
+   This is test area
+   . 
+   "                   "
+ }
+.
+ {SI  
+   This is test area with vertical    >scrollbar
+   .     
+   "                          "
+ }
+ .
+ {S-  
+   This is test area with horizontal  >scrollbar
+   .     
+   "                          "
+ }
+}
+@endsalt

@@ -50,4 +50,4 @@
    
 ## References
 * [PlantUml Documentation](https://plantuml.com)
-* [Kubernets Ref](https://github.com/dcasati/kubernetes-PlantUML)
+* [Kubernets Diagrams Ref](https://github.com/dcasati/kubernetes-PlantUML)

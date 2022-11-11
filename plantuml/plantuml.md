@@ -46,6 +46,7 @@
     >@endsalt
     >```
 * View
+  ![PlantUml View](http://plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/deepaksama/Knowledge/main/plantuml/templates/plantuml-example.puml)
     ``` plantuml
 
     @startsalt

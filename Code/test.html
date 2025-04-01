@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node-RED-like Editor with Connections</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .palette {
+            background-color: #f0f0f0;
+            padding: 10px;
+            width: 200px;
+            height: 100vh;
+            border-right: 1px solid #ccc;
+        }
+        .palette-node {
+            width: 100px;
+            height: 30px;
+            margin: 5px;
+            text-align: center;
+            line-height: 30px;
+            cursor: move;
+            border-radius: 5px;
+            color: white;
+        }
+        .node {
+            cursor: move;
+        }
+        .node-port {
+            fill: #fff;
+            stroke: #000;
+            stroke-width: 1px;
+            cursor: pointer;
+        }
+        svg {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const width = window.innerWidth - 200;
+            const height = window.innerHeight;
+
+            const svg = d3.select("body")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            const palette = d3.select("body")
+                .insert("div", "svg")
+                .attr("class", "palette");
+
+            const nodeTypes = [
+                { type: "input", color: "#a6bbcf" },
+                { type: "function", color: "#87a980" },
+                { type: "output", color: "#e2d96e" }
+            ];
+
+            let nodes = [];
+            let links = [];
+            let draggedNode = null;
+
+            // Create palette nodes
+            palette.selectAll(".palette-node")
+                .data(nodeTypes)
+                .enter()
+                .append("div")
+                .attr("class", "palette-node")
+                .style("background-color", d => d.color)
+                .text(d => d.type)
+                .call(d3.drag()
+                    .on("start", dragStarted)
+                    .on("drag", dragged)
+                    .on("end", dragEnded));
+
+            function dragStarted(event, d) {
+                draggedNode = { id: nodes.length + 1, x: event.x, y: event.y, type: d.type };
+            }
+
+            function dragged(event, d) {
+                if (draggedNode) {
+                    draggedNode.x = event.x - 200;
+                    draggedNode.y = event.y;
+                }
+            }
+
+            function dragEnded(event, d) {
+                if (draggedNode) {
+                    if (event.x > 200 && event.x < width + 200 && event.y > 0 && event.y < height) {
+                        nodes.push(draggedNode);
+                        updateNodes();
+                    }
+                    draggedNode = null;
+                }
+            }
+
+            function createNode(selection, data) {
+                selection.append("rect")
+                    .attr("width", 120)
+                    .attr("height", 60)
+                    .attr("rx", 5)
+                    .attr("ry", 5)
+                    .attr("fill", d => nodeTypes.find(nt => nt.type === d.type).color);
+
+                selection.append("text")
+                    .attr("x", 60)
+                    .attr("y", 35)
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "white")
+                    .text(d => d.type);
+
+                selection.append("circle")
+                    .attr("class", "node-port input-port")
+                    .attr("cx", 0)
+                    .attr("cy", 30)
+                    .attr("r", 5);
+
+                selection.append("circle")
+                    .attr("class", "node-port output-port")
+                    .attr("cx", 120)
+                    .attr("cy", 30)
+                    .attr("r", 5);
+            }
+
+            function updateNodes() {
+                const nodeGroup = svg.selectAll(".node")
+                    .data(nodes, d => d.id);
+
+                const newNodes = nodeGroup.enter()
+                    .append("g")
+                    .attr("class", "node")
+                    .attr("transform", d => `translate(${d.x},${d.y})`)
+                    .call(createNode)
+                    .call(d3.drag()
+                        .on("start", dragNodeStarted)
+                        .on("drag", dragNodeDragged)
+                        .on("end", dragNodeEnded));
+
+                newNodes.selectAll(".output-port")
+                    .call(d3.drag()
+                        .on("start", connectDragStarted)
+                        .on("drag", connectDragged)
+                        .on("end", connectDragEnded));
+
+                nodeGroup.attr("transform", d => `translate(${d.x},${d.y})`);
+
+                nodeGroup.exit().remove();
+
+                updateLinks();
+            }
+
+            function dragNodeStarted(event, d) {
+                d3.select(this).raise().classed("active", true);
+            }
+
+            function dragNodeDragged(event, d) {
+                d.x += event.dx;
+                d.y += event.dy;
+                d3.select(this).attr("transform", `translate(${d.x},${d.y})`);
+                updateLinks();
+            }
+
+            function dragNodeEnded(event, d) {
+                d3.select(this).classed("active", false);
+            }
+
+            function connectDragStarted(event, d) {
+                event.sourceEvent.stopPropagation();
+                const sourceNode = d3.select(this.parentNode).datum();
+                const line = svg.append("path")
+                    .attr("class", "temp-link")
+                    .attr("fill", "none")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 2);
+                
+                event.on("drag", (dragEvent) => {
+                    const [x, y] = d3.pointer(dragEvent, svg.node());
+                    const sourceX = sourceNode.x + 120;
+                    const sourceY = sourceNode.y + 30;
+                    line.attr("d", `M${sourceX},${sourceY} C${(sourceX + x) / 2},${sourceY} ${(sourceX + x) / 2},${y} ${x},${y}`);
+                });
+
+                event.on("end", (endEvent) => {
+                    const [x, y] = d3.pointer(endEvent, svg.node());
+                    const targetNode = nodes.find(n => 
+                        x >= n.x && x <= n.x + 120 && y >= n.y && y <= n.y + 60
+                    );
+                    if (targetNode && targetNode !== sourceNode) {
+                        links.push({ source: sourceNode, target: targetNode });
+                        updateLinks();
+                    }
+                    line.remove();
+                });
+            }
+
+            function connectDragged(event) {
+                // This function can be empty as the drag behavior is handled in the "start" event
+            }
+
+            function connectDragEnded(event) {
+                // This function can be empty as the end behavior is handled in the "start" event
+            }
+
+            function updateLinks() {
+                const link = svg.selectAll(".link")
+                    .data(links);
+
+                link.enter()
+                    .append("path")
+                    .attr("class", "link")
+                    .merge(link)
+                    .attr("d", d => {
+                        const sourceX = d.source.x + 120;
+                        const sourceY = d.source.y + 30;
+                        const targetX = d.target.x;
+                        const targetY = d.target.y + 30;
+                        return `M${sourceX},${sourceY} C${(sourceX + targetX) / 2},${sourceY} ${(sourceX + targetX) / 2},${targetY} ${targetX},${targetY}`;
+                    })
+                    .attr("fill", "none")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 2);
+
+                link.exit().remove();
+            }
+        });
+    </script>
+</body>
+</html>

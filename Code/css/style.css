@@ -1,0 +1,18 @@
+
+  .palette {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  .palette-node {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    cursor: move;
+    border-radius: 5px;
+  }
+  .node {
+    cursor: move;
+  }
+

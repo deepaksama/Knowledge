@@ -127,7 +127,7 @@ On macOS, press `Command + Space`, type `Terminal`, and press `Enter`.
 **Step 2: Start a Kiro chat session.**
 
 ```
-kiro chat
+kiro-cli chat
 ```
 
 > 💡 Tip: You need to be inside a chat session before you can launch a pipeline.

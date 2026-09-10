@@ -150,7 +150,7 @@ On macOS, press `Command + Space`, type `Terminal`, and press `Enter`.
 **Step 2: Start a Kiro chat session.**
 
 ```
-kiro chat
+kiro-cli chat
 ```
 
 > 💡 Tip: KiroCrew pipelines live inside chat sessions. You need an active session to explore agent features.
@@ -209,7 +209,7 @@ Which role is best when I want a fast, simple response and do not need deep reas
 
 **✅ You're done when:** You can name at least 4 built-in roles and say in one sentence what each one does.
 
-**❓ If something goes wrong:** If the AI does not list roles, try rephrasing: `List all agent roles available in KiroCrew subagent pipelines.` If you still get nothing, make sure you are inside a `kiro chat` session, not just your regular terminal.
+**❓ If something goes wrong:** If the AI does not list roles, try rephrasing: `List all agent roles available in KiroCrew subagent pipelines.` If you still get nothing, make sure you are inside a `kiro-cli chat` session, not just your regular terminal.
 
 ---
 

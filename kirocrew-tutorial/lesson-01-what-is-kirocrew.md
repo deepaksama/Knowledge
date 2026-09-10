@@ -140,7 +140,7 @@ On macOS, press `Command + Space`, type `Terminal`, and press `Enter`.
 **Step 2: Check that Kiro CLI is installed.**
 
 ```
-kiro --version
+kiro-cli --version
 ```
 
 > 💡 Tip: If you see a version number (like `1.0.0`), Kiro CLI is ready. If you see `command not found`, you need to install it before continuing.
@@ -150,7 +150,7 @@ kiro --version
 **Step 3: Open the Kiro CLI help menu.**
 
 ```
-kiro --help
+kiro-cli --help
 ```
 
 > 💡 Tip: This shows all top-level commands. You are looking for anything related to `chat` or agents — that is where KiroCrew lives.
@@ -160,7 +160,7 @@ kiro --help
 **Step 4: Open the chat subcommand help.**
 
 ```
-kiro chat --help
+kiro-cli chat --help
 ```
 
 > 💡 Tip: KiroCrew pipelines are triggered from within a Kiro chat session. This shows you the options available.
@@ -170,7 +170,7 @@ kiro chat --help
 **Step 5: Start a Kiro chat session.**
 
 ```
-kiro chat
+kiro-cli chat
 ```
 
 > 💡 Tip: This opens an interactive session. You will see a prompt where you can type messages to the AI. You are now inside the environment where KiroCrew runs.
@@ -199,7 +199,7 @@ Hello! What can you help me with?
 
 **✅ You're done when:** You have seen the Kiro CLI version number, read the help output, started a chat session, received a reply, and exited cleanly.
 
-**❓ If something goes wrong:** If `kiro --version` gives `command not found`, the Kiro CLI is not installed or not on your system PATH. Check the Kiro installation guide and make sure the install location is added to your PATH environment variable.
+**❓ If something goes wrong:** If `kiro-cli --version` gives `command not found`, the Kiro CLI is not installed or not on your system PATH. Check the Kiro installation guide and make sure the install location is added to your PATH environment variable.
 
 ---
 

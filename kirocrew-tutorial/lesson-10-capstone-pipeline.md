@@ -143,7 +143,7 @@ The diagram shows the full capstone pipeline from top to bottom. Stages 2a and 2
 
 Open the Terminal app on your computer. On macOS you can press `Cmd + Space`, type `Terminal`, and hit Enter.
 
-> 💡 **Tip:** Make sure you have Kiro CLI installed and ready. If you type `kiro --version` and see a version number, you're good to go.
+> 💡 **Tip:** Make sure you have Kiro CLI installed and ready. If you type `kiro-cli --version` and see a version number, you're good to go.
 
 ---
 
@@ -157,10 +157,10 @@ mkdir ~/kirocrew-capstone && cd ~/kirocrew-capstone
 
 ---
 
-### Step 3: Start a kiro chat session
+### Step 3: Start a kiro-cli chat session
 
 ```bash
-kiro chat
+kiro-cli chat
 ```
 
 > 💡 **Tip:** Wait for the Kiro prompt to appear before you paste anything. You should see a `>` or similar prompt indicating the session is live and ready for input.

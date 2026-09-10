@@ -130,13 +130,13 @@ The diagram shows how a single big goal flows down to the `kirocrew-conductor`, 
 
 ---
 
-**Step 2: Start kiro chat** — Run the following command to start an interactive Kiro session:
+**Step 2: Start kiro-cli chat** — Run the following command to start an interactive Kiro session:
 
 ```bash
-kiro chat
+kiro-cli chat
 ```
 
-> 💡 Tip: The `kiro chat` command puts you in an interactive session where you can send prompts directly to the AI.
+> 💡 Tip: The `kiro-cli chat` command puts you in an interactive session where you can send prompts directly to the AI.
 
 ---
 
@@ -201,7 +201,7 @@ exit
 Use the kirocrew-conductor role. Do not write code. Only produce a structured plan with work items.
 ```
 
-If the problem continues, check that your KiroCrew version supports the conductor role by running `kiro --version` and consulting the release notes.
+If the problem continues, check that your KiroCrew version supports the conductor role by running `kiro-cli --version` and consulting the release notes.
 
 ---
 

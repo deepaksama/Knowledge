@@ -133,10 +133,10 @@ echo "The speed of light is 299,792,458 meters per second." > /tmp/test-fact.txt
 
 ---
 
-**Step 3: Start a kiro chat session** — Run:
+**Step 3: Start a kiro-cli chat session** — Run:
 
 ```bash
-kiro chat
+kiro-cli chat
 ```
 
 > 💡 Tip: This launches the interactive KiroCrew chat interface where you can talk to agents and observe their tool calls in real time.

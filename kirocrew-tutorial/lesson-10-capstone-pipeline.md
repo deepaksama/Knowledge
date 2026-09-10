@@ -322,3 +322,7 @@ That is no small thing. A lot of people talk about AI agents. You actually built
 Whatever you build next — a writing assistant, a code reviewer, a research tool, a customer support pipeline — you now have the foundation to do it. The hard part was learning the concepts. You've done that.
 
 Go build something great.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 9](lesson-09-conductor-pattern.md) | [Next: Lesson 11 — Custom Agents & Templates →](lesson-11-custom-agents-and-templates.md)

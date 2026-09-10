@@ -204,3 +204,7 @@ echo "Project Zeta launched on 2026-09-09 with budget code XK-4471." > /tmp/test
 ```
 
 Now ask the agent to read and report the budget code. If it reports `XK-4471`, it read the file. If it makes up a different code, it did not.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 7](lesson-07-prompt-templates.md) | [Next: Lesson 9 — The Conductor Pattern →](lesson-09-conductor-pattern.md)

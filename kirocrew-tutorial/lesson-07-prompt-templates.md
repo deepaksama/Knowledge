@@ -165,3 +165,7 @@ Step 7: Verify the output — confirm that Stage 2's response contains three exp
 **⚠️ Common error:** Stage 2 output is generic and does not reference Stage 1's list.
 
 **Fix:** Make the reference explicit in the `prompt_template`. Instead of a vague "use the context," write: "Stage 1 gave you a numbered list of 3 points. Start each paragraph with the exact point number and restate it before expanding." Explicit instructions force the agent to anchor its output to the prior stage's results.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 6](lesson-06-blocking-vs-background.md) | [Next: Lesson 8 — Tools & MCP →](lesson-08-tools-and-mcp.md)

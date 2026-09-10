@@ -202,3 +202,7 @@ Use the kirocrew-conductor role. Do not write code. Only produce a structured pl
 ```
 
 If the problem continues, check that your KiroCrew version supports the conductor role by running `kiro --version` and consulting the release notes.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 8](lesson-08-tools-and-mcp.md) | [Next: Lesson 10 — Capstone →](lesson-10-capstone-pipeline.md)

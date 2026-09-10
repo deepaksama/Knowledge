@@ -157,3 +157,7 @@ The diagram shows the three panels inside Agent Capabilities: Agents, Agent Temp
 ✅ **Success condition:** You can see the `read-only-helper` agent listed in the Agents panel, and it successfully reads a file in the chat session.
 
 ❓ **Common error and fix:** If the **Create** button is not visible, make sure the gateway is running and you are signed in. Check the top-right corner of the dashboard for your login status.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 10](lesson-10-capstone-pipeline.md) | [Next: Lesson 12 — Artifacts & Widgets →](lesson-12-artifacts.md)

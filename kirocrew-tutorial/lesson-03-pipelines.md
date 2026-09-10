@@ -181,3 +181,7 @@ Can you explain the pipeline you just ran? How many stages were there, and what 
 ---
 
 *End of Lesson 3*
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 2](lesson-02-agent-roles.md) | [Next: Lesson 4 — Sequential vs Parallel →](lesson-04-sequential-vs-parallel.md)

@@ -182,3 +182,7 @@ The diagram shows two paths from a chat message: plain text (left) is a dead end
 > *"Please save that HTML as a named artifact in my artifact library."*
 
 The agent needs an explicit instruction to save.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 11](lesson-11-custom-agents-and-templates.md) | [Next: Lesson 13 — Scheduling →](lesson-13-scheduling.md)

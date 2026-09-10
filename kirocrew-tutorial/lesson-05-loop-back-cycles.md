@@ -232,3 +232,7 @@ You succeed when you see at least one loop iteration in the console log — the 
 ---
 
 *Next up — Lesson 6: Branching Pipelines — sending work to different agents based on output content.*
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 4](lesson-04-sequential-vs-parallel.md) | [Next: Lesson 6 — Blocking vs Background →](lesson-06-blocking-vs-background.md)

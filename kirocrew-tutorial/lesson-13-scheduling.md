@@ -261,3 +261,7 @@ kirocrew cron remove test-job
 ✅ **Success condition:** You ran `kirocrew cron list` and saw the job. You triggered it manually and saw a result appear in the dashboard notifications.
 
 ❓ **Common error and fix:** If `kirocrew cron trigger` returns `job not found`, the job name is case-sensitive. Run `kirocrew cron list` to see the exact name and use that.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 12](lesson-12-artifacts.md) | [Next: Lesson 14 — Messaging Integrations →](lesson-14-messaging-integrations.md)

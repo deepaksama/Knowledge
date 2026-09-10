@@ -3,28 +3,38 @@
 
 ---
 
-This folder contains a 10-lesson, self-paced tutorial series for KiroCrew — the AI agent orchestration system built into the Kiro CLI. Each lesson builds on the last. Start at Lesson 1 and work your way through in order.
+This folder contains a 14-lesson, self-paced tutorial series for KiroCrew — the AI agent orchestration system built into the Kiro CLI. Each lesson builds on the last. Start at Lesson 1 and work your way through in order.
 
 ---
 
 ## Lessons at a Glance
 
-| # | File | Topic | What You'll Learn |
-|---|------|--------|-------------------|
-| 1 | `lesson-01-what-is-kirocrew.md` | What Is KiroCrew? | Overview, architecture, key terms |
-| 2 | `lesson-02-agent-roles.md` | Agent Roles | Built-in roles and when to use each |
-| 3 | `lesson-03-pipelines.md` | Pipelines | Chaining agents into automated workflows |
-| 4 | `lesson-04-sequential-vs-parallel.md` | Sequential vs Parallel | `depends_on`, bottlenecks, speed tradeoffs |
-| 5 | `lesson-05-loop-back-cycles.md` | Loop-Back Cycles | Iterative review with `loop_to` and trigger text |
-| 6 | `lesson-06-blocking-vs-background.md` | Blocking vs Background | Execution modes and what's not yet available |
-| 7 | `lesson-07-prompt-templates.md` | Prompt Templates | Writing instructions, using `{task}`, passing context |
-| 8 | `lesson-08-tools-and-mcp.md` | Tools & MCP | File I/O, web search, shell, and external integrations |
-| 9 | `lesson-09-conductor-pattern.md` | The Conductor Pattern | Managing long-horizon goals with `kirocrew-conductor` |
-| 10 | `lesson-10-capstone-pipeline.md` | Capstone Project | Build a full research-to-report pipeline |
-| 11 | `lesson-11-custom-agents-and-templates.md` | Custom Agents & Templates | Create agents with custom model, prompt, and tools; use templates |
-| 12 | `lesson-12-artifacts.md` | Artifacts & Widgets | Save agent output, interactive widgets, version history, deploy to AWS |
-| 13 | `lesson-13-scheduling.md` | Scheduling (Cron, Heartbeats, Webhooks) | Automate tasks on a schedule or trigger from external systems |
-| 14 | `lesson-14-messaging-integrations.md` | Messaging Integrations | Connect Crew to Slack, Telegram, Discord, Teams, WhatsApp, and more |
+| # | Lesson | Topic | What You'll Learn |
+|---|--------|--------|-------------------|
+| 1 | [What Is KiroCrew?](lesson-01-what-is-kirocrew.md) | Overview & Architecture | What KiroCrew is, key terms, overall architecture diagram |
+| 2 | [Agent Roles](lesson-02-agent-roles.md) | Built-In Roles | All 5 built-in roles and when to use each |
+| 3 | [Pipelines](lesson-03-pipelines.md) | Chaining Agents | Linking agents into automated multi-step workflows |
+| 4 | [Sequential vs Parallel](lesson-04-sequential-vs-parallel.md) | Stage Ordering | `depends_on`, bottlenecks, and speed tradeoffs |
+| 5 | [Loop-Back Cycles](lesson-05-loop-back-cycles.md) | Iterative Review | `loop_to`, trigger text, and `max_iterations` |
+| 6 | [Blocking vs Background](lesson-06-blocking-vs-background.md) | Execution Modes | Blocking mode (available) vs background (not yet) |
+| 7 | [Prompt Templates](lesson-07-prompt-templates.md) | Writing Instructions | `prompt_template`, `{task}` placeholder, passing context |
+| 8 | [Tools & MCP](lesson-08-tools-and-mcp.md) | Tool Integration | File I/O, web search, shell, and external MCP integrations |
+| 9 | [The Conductor Pattern](lesson-09-conductor-pattern.md) | Long-Horizon Goals | Managing complex goals with `kirocrew-conductor` |
+| 10 | [Capstone Project](lesson-10-capstone-pipeline.md) | Full Pipeline | Build a complete research-to-report pipeline |
+| 11 | [Custom Agents & Templates](lesson-11-custom-agents-and-templates.md) | Agent Configuration | Create agents with custom model, prompt, and tools |
+| 12 | [Artifacts & Widgets](lesson-12-artifacts.md) | Persistent Output | Save output, interactive widgets, version history, deploy to AWS |
+| 13 | [Scheduling](lesson-13-scheduling.md) | Automation | Cron jobs, heartbeats, webhooks — run Crew unattended |
+| 14 | [Messaging Integrations](lesson-14-messaging-integrations.md) | Connect Everywhere | Slack, Telegram, Discord, Teams, WhatsApp, and more |
+
+---
+
+## Quick Navigation
+
+- [→ Start here: Lesson 1](lesson-01-what-is-kirocrew.md)
+- [→ Jump to the Capstone: Lesson 10](lesson-10-capstone-pipeline.md)
+- [→ Custom agents: Lesson 11](lesson-11-custom-agents-and-templates.md)
+- [→ Scheduling: Lesson 13](lesson-13-scheduling.md)
+- [→ Connect to Slack/Discord/Telegram: Lesson 14](lesson-14-messaging-integrations.md)
 
 ---
 

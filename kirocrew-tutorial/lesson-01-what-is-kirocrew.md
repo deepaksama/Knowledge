@@ -204,3 +204,7 @@ Hello! What can you help me with?
 ---
 
 *End of Lesson 1*
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [Next: Lesson 2 — Agent Roles →](lesson-02-agent-roles.md)

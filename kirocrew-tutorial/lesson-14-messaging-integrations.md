@@ -187,3 +187,7 @@ The diagram shows the Crew Gateway at the center, with three built-in surfaces (
 **✅ Success condition:** You send a message in Slack and get a reply from Crew. The dashboard shows the conversation in a linked session.
 
 **❓ Common error and fix:** If the bot does not respond, run `kirocrew doctor` in your terminal. The most common cause is Socket Mode being turned off — go back to the Slack app settings and make sure Socket Mode is toggled **ON**.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 13](lesson-13-scheduling.md)

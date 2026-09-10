@@ -214,3 +214,7 @@ Which role is best when I want a fast, simple response and do not need deep reas
 ---
 
 *End of Lesson 2*
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 1](lesson-01-what-is-kirocrew.md) | [Next: Lesson 3 — Pipelines →](lesson-03-pipelines.md)

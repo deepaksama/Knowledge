@@ -188,3 +188,7 @@ The run completes without errors. The log shows `fetch-data` and `validate-schem
 **Error:** `generate-report` fails with `unknown stage referenced in depends_on: fetch_data`
 
 **Fix:** Stage names in `depends_on` must exactly match the stage keys in `crew.yaml`. Check for typos, especially underscores vs hyphens (e.g., `fetch_data` vs `fetch-data`). Fix the name to match exactly and re-run `kiro crew validate`.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 3](lesson-03-pipelines.md) | [Next: Lesson 5 — Loop-Back Cycles →](lesson-05-loop-back-cycles.md)

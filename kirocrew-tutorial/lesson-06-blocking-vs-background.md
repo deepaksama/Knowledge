@@ -266,3 +266,7 @@ The left side shows the blocking flow: the user sends a task, waits while stages
 **⚠️ Common Error:** The pipeline seems to "hang" and never return.
 
 **Fix:** This is usually a timeout or a stage that got stuck — not a blocking-mode issue. Check that each stage has a valid input and that the model or tool it calls is available. Add a shorter, simpler stage to test. If the pipeline does complete but takes longer than expected, that is normal blocking behavior — it is waiting for real work to finish.
+
+---
+
+**Navigation:** [← Back to Index](README.md) | [← Lesson 5](lesson-05-loop-back-cycles.md) | [Next: Lesson 7 — Prompt Templates →](lesson-07-prompt-templates.md)

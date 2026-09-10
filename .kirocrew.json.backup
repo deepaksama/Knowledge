@@ -1,0 +1,11 @@
+{
+  "provider": "ollama",
+  "model": "qwen2.5-coder:1.5b",
+  "providers": {
+    "ollama": {
+      "baseURL": "http://localhost:11434"
+    }
+  },
+  "approval": "auto",
+  "dashboard": {}
+}

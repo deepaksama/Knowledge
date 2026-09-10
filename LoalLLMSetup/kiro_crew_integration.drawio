@@ -1,0 +1,112 @@
+<mxfile host="65bd71144e">
+    <diagram id="K60wl_Cf-Yl8Y4z5tbUh" name="Page-1">
+        <mxGraphModel dx="1054" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="800" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Agent Configuration (.kirocrew.json)" vertex="1">
+                    <mxGeometry height="60" width="200" x="90" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Kirocrew Agent" vertex="1">
+                    <mxGeometry height="60" width="200" x="90" y="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" edge="1" parent="1" source="3" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;edgeStyle=orthogonalEdgeStyle;" target="2" value="Load agent definition">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="160" as="sourcePoint"/>
+                        <mxPoint x="250" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Agent-specific Config (model, role, goals)" vertex="1">
+                    <mxGeometry height="60" width="260" x="60" y="255" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" edge="1" parent="1" source="3" style="endArrow=classic;html=1;exitX=0.471;exitY=1.036;entryX=0.5;entryY=0;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" target="5" value="Load agent config">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="260" as="sourcePoint"/>
+                        <mxPoint x="250" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="GitHub OAuth Token (stored in .kiro/settings/)" vertex="1">
+                    <mxGeometry height="40" width="260" x="60" y="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" edge="1" parent="1" source="5" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="7" value="Load authentication token">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="360" as="sourcePoint"/>
+                        <mxPoint x="250" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="MCP Server (OpenAI-compatible)" vertex="1">
+                    <mxGeometry height="60" width="200" x="90" y="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" edge="1" parent="1" source="7" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="9" value="Initialize MCP server with token">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="460" as="sourcePoint"/>
+                        <mxPoint x="250" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="MCP Configuration (~/.kiro/settings/mcp.json)" vertex="1">
+                    <mxGeometry height="60" width="260" x="60" y="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" edge="1" parent="1" source="9" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="11" value="Load MCP config for Kiro Cloud endpoint">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="560" as="sourcePoint"/>
+                        <mxPoint x="250" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Kiro Cloud API" vertex="1">
+                    <mxGeometry height="60" width="200" x="90" y="660" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" edge="1" parent="1" source="11" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="13" value="Send prompt with auth token">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="660" as="sourcePoint"/>
+                        <mxPoint x="250" y="610" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Response from LLM" vertex="1">
+                    <mxGeometry height="60" width="200" x="90" y="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" edge="1" parent="1" source="13" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="15" value="Receive and return response">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="200" y="760" as="sourcePoint"/>
+                        <mxPoint x="250" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="GitHub OAuth Server" vertex="1">
+                    <mxGeometry height="40" width="100" x="480" y="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" edge="1" parent="1" source="7" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="17" value="Auth token request">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="380" y="400" as="sourcePoint"/>
+                        <mxPoint x="430" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="GitHub OAuth Token" vertex="1">
+                    <mxGeometry height="60" width="200" x="600" y="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" edge="1" parent="1" source="19" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="13" value="API Token">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="590" y="610" as="sourcePoint"/>
+                        <mxPoint x="290" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Kiro Cloud LLM Service" vertex="1">
+                    <mxGeometry height="60" width="200" x="560" y="650" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" edge="1" parent="1" source="21" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="15" value="Process request with cloud model">
+                    <mxGeometry height="50" relative="1" width="50" x="-0.6841" y="20" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="560.03" y="730"/>
+                            <mxPoint x="425" y="730"/>
+                            <mxPoint x="425" y="790"/>
+                        </Array>
+                        <mxPoint x="630" y="710" as="sourcePoint"/>
+                        <mxPoint x="510" y="770" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;" value="Data Flow: Agent Config → Auth Token → MCP Server → Kiro Cloud → LLM Response" vertex="1">
+                    <mxGeometry height="20" width="550" x="100" y="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

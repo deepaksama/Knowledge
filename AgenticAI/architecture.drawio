@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="039tyb3hSB5N5GgGuMvB" name="Page-1">
+        <mxGraphModel dx="928" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+                    <mxGeometry height="220" width="170" x="560" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-4" edge="1" parent="1" source="0s_buxmKiWIa6BcGlNSP-1" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0s_buxmKiWIa6BcGlNSP-3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="NanoBot" vertex="1">
+                    <mxGeometry height="60" width="120" x="585" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Mounted File system" vertex="1">
+                    <mxGeometry height="40" width="120" x="585" y="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Docker Container&lt;/font&gt;&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="30" width="140" x="575" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-16" edge="1" parent="1" source="0s_buxmKiWIa6BcGlNSP-1" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;libavoidRouting=1;" target="0s_buxmKiWIa6BcGlNSP-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&lt;b&gt;&lt;font&gt;Raspberry Pi Server&lt;/font&gt;&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="30" width="190" x="550" y="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-13" edge="1" parent="1" source="0s_buxmKiWIa6BcGlNSP-11" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0s_buxmKiWIa6BcGlNSP-12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Olama" vertex="1">
+                    <mxGeometry height="60" width="120" x="135" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="LLM" vertex="1">
+                    <mxGeometry height="60" width="120" x="135" y="315" as="geometry"/>
+                </mxCell>
+                <mxCell id="0s_buxmKiWIa6BcGlNSP-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&lt;b&gt;&lt;font&gt;Macbook&lt;/font&gt;&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="30" width="190" x="90" y="90" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Use ollama-coder on code saves",
+      "trigger": "PostFileSave",
+      "description": "Invoke ollama-coder on TypeScript file save",
+      "matcher": "\\.tsx?$|\\.js$",
+      "action": {
+        "type": "agent",
+        "prompt": "Use the ollama-coder agent to review this TypeScript/JavaScript file for best practices and potential issues."
+      },
+      "enabled": true
+    }
+  ]
+}

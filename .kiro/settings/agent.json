@@ -1,0 +1,46 @@
+{
+  "defaultAgent": {
+    "model": "auto"
+  },
+  "agents": {
+    "ollama-coder": {
+      "name": "ollama-coder",
+      "description": "Routes tasks through Ollama qwen2.5-coder using MCP tools",
+      "tools": [
+        "execute_bash",
+        "fs_read",
+        "fs_write",
+        "code",
+        "grep",
+        "glob",
+        "web_fetch",
+        "web_search",
+        "introspect",
+        "session",
+        "report",
+        "tool_search",
+        "ollama_chat",
+        "ollama_generate"
+      ],
+      "allowedTools": [
+        "execute_bash",
+        "fs_read",
+        "fs_write",
+        "code",
+        "grep",
+        "glob",
+        "web_fetch",
+        "web_search",
+        "introspect",
+        "session",
+        "report",
+        "tool_search",
+        "ollama_chat",
+        "ollama_generate"
+      ],
+      "approval": "auto",
+      "dashboard": {},
+      "prompt": "When you need to generate code or answer questions, use the ollama_chat tool with the qwen2.5-coder:1.5b model. This local model is optimized for coding tasks."
+    }
+  }
+}

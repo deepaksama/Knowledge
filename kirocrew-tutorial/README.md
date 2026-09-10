@@ -21,6 +21,10 @@ This folder contains a 10-lesson, self-paced tutorial series for KiroCrew — th
 | 8 | `lesson-08-tools-and-mcp.md` | Tools & MCP | File I/O, web search, shell, and external integrations |
 | 9 | `lesson-09-conductor-pattern.md` | The Conductor Pattern | Managing long-horizon goals with `kirocrew-conductor` |
 | 10 | `lesson-10-capstone-pipeline.md` | Capstone Project | Build a full research-to-report pipeline |
+| 11 | `lesson-11-custom-agents-and-templates.md` | Custom Agents & Templates | Create agents with custom model, prompt, and tools; use templates |
+| 12 | `lesson-12-artifacts.md` | Artifacts & Widgets | Save agent output, interactive widgets, version history, deploy to AWS |
+| 13 | `lesson-13-scheduling.md` | Scheduling (Cron, Heartbeats, Webhooks) | Automate tasks on a schedule or trigger from external systems |
+| 14 | `lesson-14-messaging-integrations.md` | Messaging Integrations | Connect Crew to Slack, Telegram, Discord, Teams, WhatsApp, and more |
 
 ---
 
@@ -45,4 +49,4 @@ To view any diagram:
 
 ---
 
-*Total estimated time to complete all 10 lessons: ~1.5 hours*
+*Total estimated time to complete all 14 lessons: ~2.5 hours*
